@@ -1,5 +1,7 @@
 #include <stdio.h>
-	/*THIS FUNCTION PRINTS "Programming is like building a multilingual puzzle*/
+	/*THIS FUNCTION PRINTS "Programming is like building
+	 *  a multilingual 
+	 *  puzzle*/
 
 
 int main(void)
