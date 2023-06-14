@@ -1,7 +1,9 @@
 #include <stdio.h>
-	/*THIS FUNCTION PRINTS "Programming is like building
+	/**
+	 * main - THIS FUNCTION PRINTS "Programming is like building
 	 *  a multilingual 
-	 *  puzzle*/
+	 *  puzzle
+	 *  */
 
 
 int main(void)
