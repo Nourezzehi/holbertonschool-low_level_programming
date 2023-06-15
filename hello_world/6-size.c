@@ -5,9 +5,10 @@
 #include <stdio.h>
 
 /**
- * main - prints the size of various types on the computer it is compiled and run on.
+ * main - prints the size of various types on the computer it is
+ * compiled and run on.
  *
- * return : ALways 0 .
+ * Return: Always 0.
  */
 
 int main(void)
