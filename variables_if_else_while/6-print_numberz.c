@@ -8,8 +8,8 @@ int main(void)
 {
 	int i;
 
-	i = 45;
-	while (i <= 54)
+	i = 48;
+	while (i <= 57)
 	{
 		putchar(i);
 		i++;
