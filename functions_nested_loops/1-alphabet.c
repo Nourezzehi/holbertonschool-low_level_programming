@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,11 +7,12 @@
 
 void print_alphabet(void)
 {
-	c = 'a';
+	char c = 'a';
+
 	while (c <= 'z')
 	{
-		_putchar(c);
+		putchar(c);
 		c++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }

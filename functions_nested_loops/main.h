@@ -2,11 +2,6 @@
 #define MYHEADER_H
 
 /* Function declaration*/
-int _putchar (char c);
+int _putchar (char k);
 void print_alphabet(void);
-/*variables declaratin*/
-int i;
-char str [] = "_putchar";
-char c;
-
 #endif

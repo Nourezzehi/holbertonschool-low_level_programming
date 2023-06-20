@@ -9,9 +9,12 @@
 
 int main(void)
 {
-for (i = 0; str[i] != '\0'; i++)
+	int i;
+	char ch [25] = "_putchar";
+
+for (i = 0; ch[i] != '\0'; i++)
 {
-	putchar(str[i]);
+	putchar(ch[i]);
 }
 	putchar('\n');
 	return (0);
