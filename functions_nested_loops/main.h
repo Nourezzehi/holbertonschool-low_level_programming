@@ -5,6 +5,6 @@
 int _putchar (char c);
 /*variables declaratin*/
 int i;
-char str [25];
+char str [] = "_putchar";
 
 #endif
