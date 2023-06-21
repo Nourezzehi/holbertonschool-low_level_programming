@@ -19,10 +19,17 @@ void print_to_98(int n)
 			_putchar('-');
 			if (i > (-10))
 				_putchar(-i + 48);
-			else
+			else if (i > (-100))
 			{
 				_putchar(((-i) / 10) + 48);
 				_putchar(((-i) % 10) + 48);
+			}
+			else
+			{
+			_putchar(((-i) / 100) + 48);
+			_putchar(((-i) % 100) / 10) + 48);
+			_putchar(((-i) % 10) + 48);
+
 			}
 			_putchar(',');
 			_putchar(' ');
