@@ -27,7 +27,7 @@ void print_to_98(int n)
 			else
 			{
 			_putchar(((-i) / 100) + 48);
-			_putchar(((-i) % 100) / 10) + 48);
+			_putchar((((-i) % 100) / 10) + 48);
 			_putchar(((-i) % 10) + 48);
 
 			}
