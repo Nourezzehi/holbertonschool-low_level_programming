@@ -40,9 +40,11 @@ void print_to_98(int n)
 		_putchar('-');
 		if (i > -10)
 			_putchar(-i + '0');
-		else
+		else if (i > -100)
 		print_num_dig2(-i);
-		}
+		else
+		print_num_dig3(-i);	
+	}
 		else
 		{
 			if (i < 10)
