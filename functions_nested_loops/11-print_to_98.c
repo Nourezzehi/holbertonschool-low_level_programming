@@ -7,18 +7,9 @@
  */
 void print_num_dig3(int n)
 {
-	if (n < 0)
-	{
-		_putchar(((-n) / 100) + 48);
-		_putchar((((-n) % 100) / 10) + 48);
-		_putchar(((-n) % 10) + 48);
-	}
-	else
-	{
 		_putchar((n / 100) + 48);
 		_putchar(((n % 100) / 10) + 48);
 		_putchar((n % 10) + 48);
-	}
 }
 /**
  * print_num_dig2 - print 2 dig numbers
@@ -27,16 +18,8 @@ void print_num_dig3(int n)
  */
 void print_num_dig2(int n)
 {
-	if (n < 0)
-	{
-		_putchar(((-n) / 10) + 48);
-		_putchar(((-n) % 10) + 48);
-	}
-	else
-	{
 		_putchar((n / 10) + 48);
 		_putchar((n % 10) + 48);
-	}
 }
 
 /**
@@ -58,7 +41,7 @@ void print_to_98(int n)
 		if (i > -10)
 			_putchar(-i + '0');
 		else
-		print_num_dig2(i);
+		print_num_dig2(-i);
 		}
 		else
 		{
