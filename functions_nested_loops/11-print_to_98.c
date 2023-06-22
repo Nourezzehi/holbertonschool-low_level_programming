@@ -1,13 +1,9 @@
 #include "main.h"
 
 /**
- * print_to_98 - print to a given number
- *
  * print_num_dig3 - print 3 dig numbers
  *
- * print_num_dig2 - print 2 dig numbers
- *
- *@n: the number to start counting from
+ *@n: the number print
  */
 void print_num_dig3(int n)
 {
@@ -24,7 +20,11 @@ void print_num_dig3(int n)
 		_putchar((n % 10) + 48);
 	}
 }
-
+/**
+ * print_num_dig2 - print 2 dig numbers
+ *
+ * @n: the number to print
+ */
 void print_num_dig2(int n)
 {
 	if (n < 0)
@@ -39,11 +39,18 @@ void print_num_dig2(int n)
 	}
 }
 
+/**
+ * print_to_98 - print to 98
+ *
+ * @n: the given number
+ */
 void print_to_98(int n)
 {
+	int i;
+
 	if (n < 98)
 	{
-	for (int i = n; i < 98; i++)
+	for (i = n; i < 98; i++)
 	{
 	if (i < 0)
 	{
@@ -63,24 +70,19 @@ void print_to_98(int n)
 		_putchar(',');
 		_putchar(' ');
 	}
+		_putchar(' ');
 	}
-		_putchar(' ');			}
-		}}
 	else
 		{
 			for (i = n; i > 98; i--)
 			{
-		if (i == 99)
+			if (i == 99)
 			print_num_dig2(i);
-		else
-		{
+			else
 			print_num_dig3(i);
-		}
 			_putchar(',');
 			_putchar(' ');
-	}
-}
-	_putchar(9 + 48);
-	_putchar(8 + 48);
+	}}
+	print_num_dig2(98);
 	_putchar('\n');
 	}
