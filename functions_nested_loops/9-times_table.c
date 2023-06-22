@@ -20,16 +20,15 @@ void times_table(void)
 			}
 			else
 			{
-			_putchar(prod + 48);
+				_putchar(prod + 48);
 			}
 			if (j < 9)
 			{
-			_putchar(',');
-			_putchar(' ');
-				if (prod < 10)
+				_putchar(',');
 				_putchar(' ');
 			}
-
+			if ((i * j+1) < 10)
+				_putchar(' ');
 		}
 		_putchar('\n');
 	}}
