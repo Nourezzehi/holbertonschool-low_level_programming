@@ -43,7 +43,7 @@ void print_to_98(int n)
 		else if (i > -100)
 		print_num_dig2(-i);
 		else
-		print_num_dig3(-i);	
+		print_num_dig3(-i);
 	}
 		else
 		{
@@ -54,8 +54,7 @@ void print_to_98(int n)
 		}
 		_putchar(',');
 		_putchar(' ');
-	}
-	}
+	}}
 	else
 		{
 			for (i = n; i > 98; i--)
