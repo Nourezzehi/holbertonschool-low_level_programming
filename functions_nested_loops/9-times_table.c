@@ -30,6 +30,5 @@ void times_table(void)
 			if ((i * (j + 1)) < 10 && j != 9)
 				_putchar(' ');
 		}
-		if (i != 9)
 		_putchar('\n');
 	}}
