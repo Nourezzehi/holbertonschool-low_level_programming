@@ -4,7 +4,7 @@
  *
  * @a: first num
  *
- * @: second num
+ * @b: second num
  *
  * Return: mul
  */
