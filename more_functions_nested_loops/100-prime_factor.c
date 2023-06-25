@@ -11,7 +11,7 @@
 
 int prime(long n)
 {
-	int i = 2, v = 1;
+	long i = 2, v = 1;
 
 	while (v && i <= n / 2)
 	{
@@ -33,7 +33,8 @@ int prime(long n)
 
 long prime_factor(long n)
 {
-	long i = n / 2, ok = 1;
+	long i = n / 2;
+	int ok = 1;
 
 	while (ok && i >= 2)
 	{
