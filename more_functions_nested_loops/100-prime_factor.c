@@ -38,7 +38,7 @@ long prime_factor(long n)
 
 	while (ok && i >= 2)
 	{
-		if (prime(i))
+		if (prime(i) && !(n % i))
 			ok = 0;
 		else
 			i--;
