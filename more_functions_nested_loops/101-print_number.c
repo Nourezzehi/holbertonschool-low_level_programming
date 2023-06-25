@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print - print any number
@@ -30,12 +31,17 @@ void print(int n)
 
 void print_number(int n)
 {
-	if (n < 0)
+	if (n == INT_MIN)
+	{
+		_putchar('-');
+		print(-n / 10);
+		_putchar(8 + '0');
+	}
+	else if (n < 0)
 	{
 		_putchar('-');
 		print(-n);
 	}
 	else
 		print(n);
-	/*_putchar('\n');*/
 }
