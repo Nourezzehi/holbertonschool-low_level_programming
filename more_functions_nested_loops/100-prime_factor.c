@@ -33,7 +33,7 @@ int prime(long n)
 
 long prime_factor(long n)
 {
-	int i = n / 2, ok = 1;
+	long i = n / 2, ok = 1;
 
 	while (ok && i >= 2)
 	{
@@ -61,6 +61,6 @@ int main(void)
 {
 	long n = 612582475143;
 
-	printf("The prime factor of %ld is: %ld\n",n,prime_factor(n));
+	printf("%ld", prime_factor(n));
 	return (0);
 }
