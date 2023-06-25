@@ -56,7 +56,7 @@ long prime_factor(long n)
 
 int main(void)
 {
-	long n = 612582475143;
+	long n = 612852475143;
 
 	printf("%ld\n", prime_factor(n));
 	return (0);
