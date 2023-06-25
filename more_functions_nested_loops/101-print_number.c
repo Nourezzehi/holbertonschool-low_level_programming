@@ -37,5 +37,5 @@ void print_number(int n)
 	}
 	else
 		print(n);
-	_putchar('\n');
+	/*_putchar('\n');*/
 }
