@@ -13,7 +13,7 @@ int prime(long n)
 {
 	int i = 2, v = 1;
 
-	while (v && i <= n / 2)
+	while (v == 1 && i <= n / 2)
 	{
 		if (n % i == 0)
 			v = 0;
@@ -35,7 +35,7 @@ long prime_factor(long n)
 {
 	long i = n / 2, ok = 1;
 
-	while (ok && i >= 2)
+	while (ok == 1 && i >= 2)
 	{
 		if (prime(i))
 			ok = 0;
@@ -43,11 +43,6 @@ long prime_factor(long n)
 	}
 	return (i);
 }
-
-
-
-
-
 
 /**
  * main - prints the largest prime
