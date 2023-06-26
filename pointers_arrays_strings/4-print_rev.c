@@ -4,7 +4,7 @@
  * _strlen - get the length of
  * a string
  *
- * @ch
+ * @ch: the string
  *
  * Return: len
  */
