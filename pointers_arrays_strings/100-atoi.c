@@ -1,4 +1,3 @@
-/*#include <stdio.h>*/
 
 /**
  * _strlen - claculates the length
@@ -32,22 +31,20 @@ int _strlen(char *ch)
 
 int _atoi(char *s)
 {
-	int len = _strlen(s), i = len - 1, n = 0, j = 1, ok = 1;
+	int len = _strlen(s), i = len - 1, n = 0, j = 1, neg = 0;
 
-	while (i >= 0 && ok)
+	while (i >= 0)
 	{
 		if (*(s + i) <= '9' && *(s + i) >= '0')
 		{
-		n += (*(s + i) - '0') * j;
-		/*printf("| %d |", n);*/
-		j *= 10;
-		if (*(s + i - 1) < '0' || *(s + i - 1) > '9')
-		{
-			if (*(s + i - 1) == '-')
-				n *= -1;
-			ok = 0;
-		}}
+			n += (*(s + i) - '0') * j;
+			j *= 10;
+		}
+		if (*(s + i) == '-')
+			neg++;
 		i--;
 	}
+	if (neg % 2)
+		return (-n);
 	return (n);
 }
