@@ -11,6 +11,7 @@
 int _strlen(char *ch)
 {
 	int i = 0, len = 0;
+
 	while (*(ch + i) != '\0')
 	{
 		len++;
@@ -32,14 +33,14 @@ int _strlen(char *ch)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0, len = _strlen(dest);
+	int i = 0/* len = _strlen(dest) - 1*/;
 
 	while (*(src + i) != '\0' && i < n)
 	{
 		*(dest + i) = *(src + i);
-		i++;	
+		i++;
 	}
-	if (i >= len)
-		*(dest + i) = '\0';
+	/*if (i >= len)
+		*(dest + i) = '\0';*/
 	return (dest);
 }
