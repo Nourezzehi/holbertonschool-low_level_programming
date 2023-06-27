@@ -8,7 +8,7 @@
  * Return:len
  */
 
-int _strlen(char * ch)
+int _strlen(char *ch)
 {
 	int i = 0, len = 0;
 
@@ -34,7 +34,7 @@ void puts_half(char *str)
 	while (i < half)
 	{
 		_putchar(*(str + len - half));
-		len ++;
+		len++;
 		i++;
 	}
 	_putchar('\n');
