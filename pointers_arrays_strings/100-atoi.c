@@ -1,6 +1,28 @@
 #include <limits.h>
 
 /**
+ * calcul_neg - calculates (-) in
+ * a given string
+ *
+ * @ch: the given string
+ *
+ * Return: neg
+ */
+
+int calcul_neg(char *ch)
+{
+	int i = 0, neg = 0;
+
+	while (*(ch + i) != '\0')
+	{
+		i++;
+		if (*(ch + i) == '-')
+			neg++;
+	}
+	return (neg);
+}
+
+/**
  * _strlen - claculates the length
  * of a string
  *
@@ -32,22 +54,21 @@ int _strlen(char *ch)
 
 int _atoi(char *s)
 {
-	int len = _strlen(s), i = len - 1, n = 0, j = 1, neg = 0;
-
+	int len = _strlen(s), i = len - 1, n = 0, j = 1, neg;
+	
+	neg = calcul_neg(s);
+	if (neg % 2)
+	{
+		j = -1;
+	}
 	while (i >= 0)
 	{
 		if (*(s + i) <= '9' && *(s + i) >= '0')
 		{
 			n += (*(s + i) - '0') * j;
 			j *= 10;
-			if (j > INT_MAX)
-				return n;
 		}
-		if (*(s + i) == '-')
-			neg++;
 		i--;
 	}
-	if (neg % 2)
-		return (-n);
 	return (n);
 }
