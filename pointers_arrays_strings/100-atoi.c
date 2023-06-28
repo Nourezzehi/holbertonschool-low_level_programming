@@ -1,3 +1,4 @@
+#include <limits.h>
 
 /**
  * _strlen - claculates the length
@@ -39,6 +40,8 @@ int _atoi(char *s)
 		{
 			n += (*(s + i) - '0') * j;
 			j *= 10;
+			if (j > INT_MAX)
+				return n;
 		}
 		if (*(s + i) == '-')
 			neg++;
