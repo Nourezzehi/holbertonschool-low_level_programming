@@ -1,3 +1,4 @@
+#include <stdlib.h>
 
 /**
  * _strlen - calculates length of
@@ -33,11 +34,14 @@ int _strlen(char *ch)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0;
+	int i = 0, j = 0;
 
-	while (*(src + i) != '\0' && i < n)
+	while (i < n)
 	{
-		*(dest + i) = *(src + i);
+		*(dest + i) = *(src + j);
+		if (*(src + j) == '\0')
+			j--;
+		j++;
 		i++;
 	}
 	if (*(src + i) == '\0')
