@@ -13,7 +13,7 @@ int calcul_neg(char *ch)
 {
 	int i = 0, neg = 0;
 
-	while (*(ch + i) != '\0')
+	while (*(ch + i) != '\0' && (*(ch + i) > '9' || *(ch + i) < '0'))
 	{
 		if (*(ch + i) == '-')
 			neg++;
