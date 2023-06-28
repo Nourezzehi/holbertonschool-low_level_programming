@@ -15,9 +15,9 @@ int calcul_neg(char *ch)
 
 	while (*(ch + i) != '\0')
 	{
-		i++;
 		if (*(ch + i) == '-')
 			neg++;
+		i++;
 	}
 	return (neg);
 }
