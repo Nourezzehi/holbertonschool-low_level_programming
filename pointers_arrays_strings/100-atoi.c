@@ -54,20 +54,26 @@ int _strlen(char *ch)
 
 int _atoi(char *s)
 {
-	int len = _strlen(s), i = len - 1, n = 0, j = 1, neg;
+	int len = _strlen(s), i = len - 1, n = 0, j = 1, neg, R;
 
 	neg = calcul_neg(s);
 	if (neg % 2)
 	{
 		j = -1;
 	}
+	R = j;
 	while (i >= 0)
 	{
 		if (*(s + i) <= '9' && *(s + i) >= '0')
 		{
+			if (n != 0 && (*(s + i + 1) <= '0' || *(s + i + 1) >= '9'))
+			{
+				n = 0;
+				j = R;
+			}
 			n += (*(s + i) - '0') * j;
-			if (j != 1000000000 && j!= -1000000000)
-			j *= 10;
+			if (j != 1000000000 && j != -1000000000)
+				j *= 10;
 		}
 		i--;
 	}
