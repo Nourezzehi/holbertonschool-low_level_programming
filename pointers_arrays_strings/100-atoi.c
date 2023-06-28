@@ -55,7 +55,7 @@ int _strlen(char *ch)
 int _atoi(char *s)
 {
 	int len = _strlen(s), i = len - 1, n = 0, j = 1, neg;
-	
+
 	neg = calcul_neg(s);
 	if (neg % 2)
 	{
@@ -66,6 +66,7 @@ int _atoi(char *s)
 		if (*(s + i) <= '9' && *(s + i) >= '0')
 		{
 			n += (*(s + i) - '0') * j;
+			if (j != 1000000000)
 			j *= 10;
 		}
 		i--;
