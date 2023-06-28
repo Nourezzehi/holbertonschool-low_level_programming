@@ -33,14 +33,20 @@ int _strlen(char *ch)
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i = 0/* len = _strlen(dest) - 1*/;
+	int i = 0;
 
 	while (*(src + i) != '\0' && i < n)
 	{
 		*(dest + i) = *(src + i);
 		i++;
 	}
-	/*if (i >= len)
-		*(dest + i) = '\0';*/
+	if (*(src + i) == '\0')
+	{
+		while (i < _strlen(dest))
+		{
+			*(dest + i) = '\0';
+			i++;
+		}
+	}
 	return (dest);
 }
