@@ -9,22 +9,16 @@
 
 char *leet(char *ch)
 {
-	int i = 0;
-	char c;
+	int i = 0, j;
+	char st[11] = "AaEeLlOoTt", st_num[11] = "4433110077";
 
 	while(*(ch + i))
 	{
-		c = *(ch + i);
-		if (c == 'a' || c == 'A')
-			*(ch + i) = '4';
-		else if (c == 'e' || c == 'E')
-		       *(ch + i) = '3';
-		else if (c == 'o' || c == 'O')
-	 		*(ch + i) = '0';
-		else if (c == 't' || c == 'T')
-			*(ch + i) = '7';
-		else if (c == 'l' || c == 'L')
-			*(ch + i) = '1';
+		j = 0;
+		while (*(st + j) != *(ch + i) && *(st + j) != '\0')
+			j++;
+		if (*(st + j) != '\0')
+			*(ch + i) = *(st_num + j);
 		i++;
 	}
 	return (ch);
