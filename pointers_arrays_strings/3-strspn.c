@@ -18,7 +18,7 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		v = 0;
 		p = accept;
-		while((*p) != '\0')
+		while ((*p) != '\0')
 		{
 			if (*(p) == *(s))
 			{
