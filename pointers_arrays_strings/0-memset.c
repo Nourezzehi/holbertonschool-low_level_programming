@@ -3,6 +3,9 @@
  * _memset - fills n bytes of the
  * memory with a given char
  *
+ * @s: the pointer to the memory area
+ * to be filled
+ *
  * @b: the given char
  *
  * @n: number of bytes
@@ -20,6 +23,6 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		*(s + i) = b;
 		i++;
-	}	
+	}
 	return (s);
 }
