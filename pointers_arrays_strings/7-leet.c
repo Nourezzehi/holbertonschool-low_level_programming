@@ -12,7 +12,7 @@ char *leet(char *ch)
 	int i = 0, j;
 	char st[11] = "AaEeLlOoTt", st_num[11] = "4433110077";
 
-	while(*(ch + i))
+	while (*(ch + i))
 	{
 		j = 0;
 		while (*(st + j) != *(ch + i) && *(st + j) != '\0')
