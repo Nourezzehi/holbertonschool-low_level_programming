@@ -26,12 +26,12 @@ char *_strstr(char *haystack, char *needle)
 			{
 				j = i;
 				s = p;
-				while (*(s) != '\0' && *(s) == *(needle + j))
+				while (*(needle + j) != '\0' && *(s) == *(needle + j))
 				{
 					s++;
 					j++;
 				}
-				if ((*s) == '\0')
+				if (*(needle + j) == '\0')
 					return (p);
 			}
 			p++;
