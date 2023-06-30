@@ -10,11 +10,11 @@
  */
 
 void print_diagsums(int *a, int size)
-{	
+{
 	int i, a1 = 0, a2 = 0;
 
 	for (i = 0; i < size; i++)
-	{			
+	{	
 		a1 += a[i];
 		a += size;
 	}
