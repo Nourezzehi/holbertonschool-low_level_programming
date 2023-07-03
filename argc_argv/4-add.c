@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * isdigit - cheks if a given string can
+ * isadigit - cheks if a given string can
  * be converted into an integer
  *
  * @ch: the given string
