@@ -12,10 +12,10 @@
 
 int main(int __attribute__ ((unused)) argc, char *argv[])
 {
-	while(*argv != NULL)
+	while (*argv != NULL)
 	{
 		printf("%s\n", *argv);
-		argv ++;	
+		argv++;
 	}
 	return (0);
 }
