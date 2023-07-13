@@ -9,7 +9,7 @@
  * Return: 1 or 0;
  */
 
-int _isdigit(char c)
+int _isdigit(int c)
 {
 	if (c <= '9' && c >= '0')
 		return (1);
