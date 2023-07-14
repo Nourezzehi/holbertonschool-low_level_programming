@@ -3,5 +3,6 @@
 
 int _putchar(char);
 char *create_array(unsigned int, int);
+char *_strdup(char *);
 
 #endif
