@@ -8,6 +8,8 @@
  *
  * @s2: second string
  *
+ * @n: number of bytes to extract from s2
+ *
  * Return: string
  */
 
@@ -29,7 +31,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		else
 		{
-			s = (char *) malloc(sizeof(char) * (strlen(s2) +1));
+			s = (char *) malloc(sizeof(char) * (strlen(s2) + 1));
 			if (s != NULL)
 				strcpy(s, s2);
 		}
