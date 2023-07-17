@@ -9,13 +9,10 @@
 
 void free_dog(dog_t *dog)
 {
-	if (!dog)
-	{
-		free(dog);
-		return;
-	}
 	if (!dog->name)
 		free(dog->name);
 	if (!dog->owner)
 		free(dog->owner);
+	if (!dog)
+		free(dog);
 }
