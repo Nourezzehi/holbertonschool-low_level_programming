@@ -6,11 +6,6 @@
  *
  * @d: dogs structure
  *
- * @name: dogs name
- *
- * @age: dogs age
- *
- * @owner: dogs owner
  */
 
 void print_dog(struct dog *d)
