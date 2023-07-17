@@ -1,3 +1,5 @@
+#ifndef HEADER_H
+#define HEADER_H
 
 /**
  * struct dog - defines a structure
@@ -8,9 +10,6 @@
  *
  * @owner: the owner
  */
-
-#ifndef HEADER_H
-#define HEADER_H
 
 struct dog
 {
