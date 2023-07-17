@@ -1,7 +1,7 @@
 #include <string.h>
 #include "dog.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * init_dog - initialize the struct
  *
@@ -16,6 +16,11 @@
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (d == NULL)
+	{
+		puts("ok");
+		return;
+	}
 	d -> name = (char *) malloc(strlen(name) * sizeof(char) + 1);
 	d -> owner = (char *) malloc(strlen(owner) * sizeof(char) + 1);
 	strcpy(d -> name, name);
