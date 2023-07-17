@@ -1,3 +1,14 @@
+
+/**
+ * struct dog - defines a structure
+ *
+ * @name: a string
+ *
+ * @age: an int
+ *
+ * @owner: the owner
+ */
+
 #ifndef HEADER_H
 #define HEADER_H
 
