@@ -15,7 +15,8 @@
 void array_iterator(int *array, __attribute__ ((unused)) size_t size, void(*action)(int))
 {
 	int *p = array;
-
+	if (!action || !array)
+		return;
 	while (p != array + size)
 	{
 		action(*p);
