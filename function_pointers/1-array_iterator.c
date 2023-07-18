@@ -9,12 +9,14 @@
  *
  * @size: arrays size
  *
- * @action: function to use 
+ * @action: function to use
 */
 
-void array_iterator(int *array, __attribute__ ((unused)) size_t size, void(*action)(int))
+void array_iterator(int *array, size_t size, void(*action)(int))
 {
-	int *p = array;
+	int *p;
+
+	p = array;
 	if (!action || !array)
 		return;
 	while (p != array + size)
