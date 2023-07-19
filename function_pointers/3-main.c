@@ -26,12 +26,13 @@ int main(int argc, char *argv[])
 		puts("Error");
 		exit(98);
 	}
-	if (strcmp(c, "+") && strcmp(c, "-")  && strcmp(c, "%") && strcmp(c, "/") && strcmp(c, "*") )
+	if (strcmp(c, "+") && strcmp(c, "-") && strcmp(c, "%")
+	&& strcmp(c, "/") && strcmp(c, "*"))
 	{
 		puts("Error");
 		exit(99);
 	}
-	if ((!strcmp(c, "%") || !strcmp(c, "/")) && *(argv + 3) == 0)
+	if ((!strcmp(c, "%") || !strcmp(c, "/")) && (atoi(*(argv + 3)) == 0))
 	{
 			puts("Error");
 			exit(100);
