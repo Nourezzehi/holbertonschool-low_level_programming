@@ -31,13 +31,10 @@ int main(int argc, char *argv[])
 		puts("Error");
 		exit(99);
 	}
-	if (!strcmp(c, "%") || !strcmp(c, "/"))
+	if (!strcmp(c, "%") || !strcmp(c, "/") && *(argv + 3) == 0)
 	{
-		if (*(argv + 3) == 0)
-		{
 			puts("Error");
 			exit(100);
-		}
 	}
 	result = f(atoi(*(argv + 1)), atoi(*(argv + 3)));
 	printf("%d\n", result);
