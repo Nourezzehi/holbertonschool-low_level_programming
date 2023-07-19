@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		puts("Error");
 		exit(99);
 	}
-	if (!strcmp(c, "%") || !strcmp(c, "/") && *(argv + 3) == 0)
+	if ((!strcmp(c, "%") || !strcmp(c, "/")) && *(argv + 3) == 0)
 	{
 			puts("Error");
 			exit(100);
