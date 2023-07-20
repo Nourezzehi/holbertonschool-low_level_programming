@@ -19,15 +19,16 @@ int main(int argc, char *argv[])
 	int result;
 	int (*f)(int, int) = get_op_func(*(argv + 2));
 
-	c = malloc((sizeof(char) + 1) * strlen(*(argv + 2)));
+	c = malloc((sizeof(char)) * strlen(*(argv + 2)) + 1);
+	if (c == NULL)
+		return (0);
 	strcpy(c, *(argv + 2));
 	if (argc != 4)
 	{
 		puts("Error");
 		exit(98);
 	}
-	if (strcmp(c, "+") && strcmp(c, "-") && strcmp(c, "%")
-	&& strcmp(c, "/") && strcmp(c, "*"))
+	if (f == NULL)
 	{
 		puts("Error");
 		exit(99);
@@ -39,5 +40,6 @@ int main(int argc, char *argv[])
 	}
 	result = f(atoi(*(argv + 1)), atoi(*(argv + 3)));
 	printf("%d\n", result);
+	free(c);
 	return (0);
 }

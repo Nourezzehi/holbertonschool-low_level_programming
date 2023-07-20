@@ -21,9 +21,9 @@ int (*get_op_func(char *s))(int a, int b)
 	};
 	int i = 0;
 
-	while (*(ops + i)->op && (ops + i)->f)
+	while ((ops + i)->op && (ops + i)->f)
 	{
-		if (!strcmp(s, (ops + i)->op))
+		if (!strcmp(s, (ops + i)->op) || (!strcmp("\\*", ((ops + i)->op))))
 			return ((ops + i)->f);
 		i++;
 	}
