@@ -20,8 +20,6 @@ int main(int argc, char *argv[])
 	int (*f)(int, int) = get_op_func(*(argv + 2));
 
 	c = malloc((sizeof(char)) * strlen(*(argv + 2)) + 1);
-	if (c == NULL)
-		return (0);
 	strcpy(c, *(argv + 2));
 	if (argc != 4)
 	{
