@@ -33,8 +33,8 @@ int main(int argc, char *argv[])
 	}
 	if ((!strcmp(c, "%") || !strcmp(c, "/")) && (atoi(*(argv + 3)) == 0))
 	{
-			puts("Error");
-			exit(100);
+		puts("Error");
+		exit(100);
 	}
 	result = f(atoi(*(argv + 1)), atoi(*(argv + 3)));
 	printf("%d\n", result);

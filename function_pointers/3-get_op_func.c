@@ -1,5 +1,5 @@
 /**
- * get_op_fun - returns a specific operation
+ * get_op_func - returns a specific operation
  *@s: the operator
  * Return: a function
 */
@@ -9,11 +9,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
-		{"-", op_sub} ,
+		{"-", op_sub},
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
