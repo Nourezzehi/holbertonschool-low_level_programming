@@ -85,10 +85,10 @@ void print_all(const char * const format, ...)
 	s = (char *) malloc(sizeof(char) * (strlen(format) + 1));
 	strcpy(s, format);
 	va_start(args, format);
-	while (s && *(s + i))
+	while (format && *(format + i))
 	{
 		j = 0;
-		while ((form + j)->c != *(s + i) && j < 4)
+		while ((form + j)->c != *(format + i) && j < 4)
 			j++;
 		if (j < 4)
 		{
