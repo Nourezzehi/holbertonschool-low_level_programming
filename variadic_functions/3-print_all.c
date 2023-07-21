@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 		{'s', print_string},
 		{0, NULL}
 	};
-	
+
 	s = (char *) malloc(sizeof(char) * (strlen(format) + 1));
 	strcpy(s, format);
 	va_start(args, format);
