@@ -71,7 +71,7 @@ void print_float(va_list args)
 
 void print_all(const char * const format, ...)
 {
-	char *s, *ch = "";
+	char *ch = "";
 	size_t i = 0, j;
 	va_list args;
 	format_t form[] = {
@@ -82,8 +82,6 @@ void print_all(const char * const format, ...)
 		{0, NULL}
 	};
 
-	s = (char *) malloc(sizeof(char) * (strlen(format) + 1));
-	strcpy(s, format);
 	va_start(args, format);
 	while (format && *(format + i))
 	{
