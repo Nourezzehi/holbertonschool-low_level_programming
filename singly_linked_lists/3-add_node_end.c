@@ -4,9 +4,9 @@
 * add_node_end - add a node at the
 * beginnig of the list
 *
-* @_t***head: **head pf the list
+* @head: **head pf the list
 *
-* @_ts*tr: the string in the added node
+* @str: the string in the added node
 *
 * Return: new **head
 */
@@ -29,12 +29,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	add->len = strlen(str);
 	add->next = NULL;
 	if (!(*head))
-	{
 		*head = add;
-		return (*head);
+	else
+	{
+		while ((aux->next) != NULL)
+			aux = aux->next;
+		aux->next = add;
 	}
-	while (!(aux->next))
-		aux = aux->next;
-	aux->next = add;
 	return (*head);
 }
