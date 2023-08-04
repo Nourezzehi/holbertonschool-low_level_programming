@@ -13,6 +13,7 @@
  * Description: doubly linked list node structure
  *
  */
+
 typedef struct dlistint_s
 {
 	int n;
@@ -21,5 +22,6 @@ typedef struct dlistint_s
 } dlistint_t;
 typedef dlistint_t *list;
 size_t print_dlistint(const list);
+size_t dlistint_len(const list);
 
 #endif
