@@ -2,13 +2,13 @@
 
 /**
  * add_dnodeint - add a node at the beginning
- * of a list
+ * of adlistint_t
  *
- * @head: head of the list
+ * @head: head of thedlistint_t
  *
  * @n: the num to add
  *
- * Return: head of the list
+ * Return: head of the dlistint_t
 */
 
 list add_dnodeint(list *head, const int n)
@@ -19,6 +19,9 @@ list add_dnodeint(list *head, const int n)
 		return (NULL);
 	new->n = n;
 	new->prev = NULL;
-	new->next = *head;
-	return (new);
+	new->next = (*head);
+	if ((*head) != NULL)
+		(*head)->prev = new;
+	(*head) = new;
+	return (*head);
 }
