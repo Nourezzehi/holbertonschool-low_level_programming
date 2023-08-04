@@ -26,5 +26,6 @@ size_t dlistint_len(const list);
 list add_dnodeint(list *, const int);
 list add_dnodeint_end(list *, const int);
 void free_dlistint(list);
+list get_dnodeint_at_index(list head, unsigned int index);
 
 #endif
