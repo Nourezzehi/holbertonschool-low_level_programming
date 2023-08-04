@@ -24,5 +24,6 @@ typedef dlistint_t *list;
 size_t print_dlistint(const list);
 size_t dlistint_len(const list);
 list add_dnodeint(list *, const int);
+list add_dnodeint_end(list *, const int);
 
 #endif
