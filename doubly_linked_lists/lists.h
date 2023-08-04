@@ -29,5 +29,6 @@ void free_dlistint(list);
 list get_dnodeint_at_index(list head, unsigned int index);
 list insert_dnodeint_at_index(list *, unsigned int, int);
 int sum_dlistint(list);
+int delete_dnodeint_at_index(list *head, unsigned int index);
 
 #endif
