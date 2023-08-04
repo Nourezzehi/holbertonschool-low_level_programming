@@ -13,6 +13,8 @@ size_t list_len(const list_t *h)
 	size_t size;
 	const list_t *aux = h;
 
+	if (!h)
+		return (0);
 	while (aux != NULL)
 	{
 		size++;
