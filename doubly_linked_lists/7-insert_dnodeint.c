@@ -34,8 +34,8 @@ list insert_dnodeint_at_index(list *h, unsigned int idx, int n)
 		return (NULL);
 	new->n = n;
 	new->prev = list_move;
-	new->next = list_move->next;
 	(list_move->next)->prev = new;
+	new->next = list_move->next;
 	list_move->next = new;
 	return (new);
 }
