@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		print_exit(97, "Usage: cp file_from file_to\n", "");
 	}
 	fd2 = open(file_to, O_WRONLY | O_TRUNC);
-	if (fd2 == -1)
+	if (fd2 == 0)
 		fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
 	if (fd2 == -1)
 		print_exit(99, "Error: Can't write to %s\n", file_to);
